@@ -1,7 +1,7 @@
 FROM node:latest
+WORKDIR /usr/src/app
 COPY package*.json ./
 RUN npm install 
-WORKDIR /usr/src/app
 COPY . .
-EXPOSE 8087
-CMD ["npm","app.js"]
+EXPOSE 3015
+CMD ["node","app.js"]
